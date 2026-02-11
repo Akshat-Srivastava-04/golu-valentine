@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Golu ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 15px auto;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 280px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+            margin: 25px 0;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 12px;
+            transition: 0.3s ease;
+        }
+
+        #yesBtn {
+            background-color: #ff6f91;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            background-color: white;
+            color: #ff6f91;
+        }
+
+        #finalMessage {
+            margin-top: 40px;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>To My Beautiful Golu ❤️</h1>
+
+    <img src="us.jpg" alt="Our Photo">
+
+    <p>
+        Every day with you feels softer, calmer, and more beautiful.
+        You are my home, my peace, and my favorite smile.
+    </p>
+
+    <p>
+        I don’t just want today with you…
+        I want every Valentine of my life with you.
+    </p>
+
+    <h2>Will you be my Valentine? 🌹</h2>
+
+    <button id="yesBtn" onclick="sayYes()">Yes, always ❤️</button>
+    <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+
+    <div id="finalMessage"></div>
+</div>
+
+<script>
+function sayYes() {
+    document.getElementById("finalMessage").innerHTML =
+        "I knew it… because you are my forever love 💕<br><br>Happy Valentine's Day, Golu ❤️";
+}
+
+function moveNo() {
+    const button = document.getElementById("noBtn");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+    button.style.position = "absolute";
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
